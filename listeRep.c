@@ -56,50 +56,10 @@ void lister(const char *nom_rep)
 
 }
 
-// void lister_rec(char **nom_rep)
-// {
-
-// 	DIR* rep = NULL;
-// 	rep = opendir(*nom_rep);
-
-// 	if (rep == NULL)
-// 	{
-// 		printf("Dossier inexistant !\n");
-// 		exit(1);
-// 	}
-
-// 	printf("Le dossier a été ouvert avec succès !\n");
-
-// 	struct dirent* fichierLu;
-
-// 	if ((fichierLu = readdir(rep)) != NULL)
-// 	{	
-
-// 		// struct stat s;
-
-// 		// stat(fichierLu->d_name, &s);
-
-// 		// if (S_ISDIR(s.st_mode))
-// 		// 	lister_rec(fichierLu->d_name);
-
-// 		char *file = fichierLu->d_name;
-
-// 	}
-
-// 	if(closedir(rep) == -1)
-// 	{
-// 		printf("Problème avec la fermeture du dossier !\n");
-// 		exit(-1);
-// 	}
-
-// 	printf("Le dossier a été fermé avec succès !\n");
-
-// }
-
 
 int main(int argc, char const *argv[])
 {
-
+	
 	lister(&(*argv[1]));
 
 	return 0;
